@@ -75,8 +75,9 @@ class Exclude_Postcodes_Plugin
                     <tr valign="top">
                         <th scope="row"><?php _e('Excluded Postcodes:', 'woocommerce'); ?></th>
                         <td>
-                            <input type="text" name="excluded_postcodes" value="<?php echo esc_attr(get_option('excluded_postcodes', '')); ?>" style="width: 300px;" />
-                            <p class="description"><?php _e('Enter the postcodes to exclude, separated by commas.', 'woocommerce'); ?></p>
+                        <input type="text" name="excluded_postcodes" value="<?php echo esc_attr(get_option('excluded_postcodes', '')); ?>" style="width: 300px;" pattern="^\s*(?:\d+(?:,\s*)?)+\s*$" title="Please enter valid postcodes separated by commas." />
+                        <p class="description"><?php _e('Enter the postcodes to exclude, separated by commas.', 'woocommerce'); ?></p>
+                        <p class="description"><?php _e('Example: 9000, 9100, 9200', 'woocommerce'); ?></p>
                         </td>
                     </tr>
                 </table>
