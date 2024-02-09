@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    console.log('exclude-postcodes');
-
     // Listen for the checkout updated event
-    wp.hooks.addAction('woocommerce_checkout_updated', 'checkoutUpdated', function() {
+    wp.hooks.addAction('update_checkout', 'checkoutUpdated', function() {
+
         // Get the current checkout state
         const checkoutState = wp.data.select('core/checkout').getCheckout();
 
@@ -23,4 +22,5 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
 });
