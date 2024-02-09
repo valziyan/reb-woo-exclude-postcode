@@ -4,6 +4,8 @@ Plugin Name: REB Woo Exclude Postcodes
 Description: Plugin to exclude certain postcodes from ordering in WooCommerce.
 Version: 1.0
 Author: Ryan Balisi
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 // Exit if accessed directly
